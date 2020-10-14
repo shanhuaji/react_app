@@ -35,3 +35,4 @@ export const deCookie:deCookieType=function(key, value){
 //   if (value === 'undefined') value = 0;
   setCookie(key, value, -1);
 }
+/* 第一次修改 */
