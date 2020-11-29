@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import styles from './index.less';
 import { Form, Input, Button, Checkbox, Upload, message } from 'antd';
 import {
@@ -27,6 +27,7 @@ export default connect(state => {
   // console.log(state.user);
   return state;
 })(function Register({ dispatch }) {
+  
   const onFinish = values => {
     /* 向状态管理user发送数据 */
     /*    console.log(values); */

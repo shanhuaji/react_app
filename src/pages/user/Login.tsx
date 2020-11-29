@@ -4,6 +4,7 @@ import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import styles from './index.less';
 import { Link, connect } from 'umi';
 import md5 from 'md5';
+console.log(connect);
 export default connect(user => {
   return user;
 })(

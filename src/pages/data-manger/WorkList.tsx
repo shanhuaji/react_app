@@ -42,10 +42,7 @@ export default connect(work => work)(function WorkList({
         },
       },
     });
-    /*  for(let props in values){
-      values[props]=''
-    }
-    console.log(values); */
+    
   };
   /* 删除 */
   const removeHandler = function(val) {
@@ -63,19 +60,23 @@ export default connect(work => work)(function WorkList({
       payload: {
         id,
         num,
-      }, 
+      },
     });
   };
   /* 查询 */
-  const queryHandler = function (){
-    let {current:{state:{value}}} = query
+  const queryHandler = function() {
+    let {
+      current: {
+        state: { value },
+      },
+    } = query;
     dispatch({
-      type:"work/queryTable",
-      payload:{
-        value
-      }
-    })
-  }
+      type: 'work/queryTable',
+      payload: {
+        value,
+      },
+    });
+  };
   const handleCancel = function() {
     setBool(false);
   };
@@ -87,7 +88,7 @@ export default connect(work => work)(function WorkList({
         <Col className="gutter-row" span={4}>
           <div className={styles.content}>
             <Input placeholder="请输入价格查询" ref={query} />
-            <Button type="primary" onClick={queryHandler} >
+            <Button type="primary" onClick={queryHandler}>
               查询
             </Button>
           </div>
